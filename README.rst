@@ -6,8 +6,12 @@ This python script will fetch the video ID of every single video uploaded to a p
 How does it Work?
 
 1. Create a config.json file(refer the config.json file)
-2. Run the script:
-  python3 YouTubeApi.py
+
+2. Run:
+	pip install google-api-python-client
+
+3. Run the script:
+	python3 YouTubeApi.py
 
 
 How do I get my API key?
