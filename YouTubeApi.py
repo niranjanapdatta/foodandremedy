@@ -60,6 +60,12 @@ class YouTubeApi:
         for video_id in self.video_ids:
             print(video_id)
 
+    def map_to_video_urls(self):
+        """ Print Video URLs of all the videos belonging to the given
+        channel"""
+        for video_id in self.video_ids:
+            print("https://www.youtube.com/watch?v="+video_id)
+
 
 if __name__ == "__main__":
     with open('config.json', 'r') as f:
@@ -74,3 +80,4 @@ if __name__ == "__main__":
                          _channel_id)
     youtube.get_video_ids()
     youtube.print_video_ids()
+    youtube.map_to_video_urls()
