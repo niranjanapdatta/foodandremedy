@@ -45,9 +45,11 @@ class YouTubeApi:
                 break
 
             for item in items_list:
-                item_id = standard_b64decode(item['id']).decode('utf-8')
+                video_id = video['snippet']['resourceId']['videoId']
+                # (or)
+                # item_id = standard_b64decode(item['id']).decode('utf-8')
                 # To split playlist ID and Video ID
-                _playlist_id, video_id = item_id.split('.')
+                # _playlist_id, video_id = item_id.split('.')
                 self.video_ids.append(video_id)
 
             next_page = response.get('nextPageToken')
