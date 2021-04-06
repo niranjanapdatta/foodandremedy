@@ -45,7 +45,7 @@ class YouTubeApi:
                 break
 
             for item in items_list:
-                video_id = video['snippet']['resourceId']['videoId']
+                video_id = item['snippet']['resourceId']['videoId']
                 # (or)
                 # item_id = standard_b64decode(item['id']).decode('utf-8')
                 # To split playlist ID and Video ID
